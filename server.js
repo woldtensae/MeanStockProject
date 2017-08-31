@@ -10,12 +10,12 @@ var app = express();
 
 //view Engines 
 //specifies that our view is in the view folder
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname,'client'));
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 //set static floder sets our angular 
-app.use(express.static(path.join(__dirname, 'client')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 //body parser MW
 //helps us to recive forms as a whole body 
